@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @SuppressWarnings("unused")
@@ -28,7 +29,7 @@ public class EntityCHasManyDees extends PojoBase implements Serializable {
     public EntityCHasManyDees() {
         super();
     }
-    
+   
     public String getName() {
         return name;
     }
