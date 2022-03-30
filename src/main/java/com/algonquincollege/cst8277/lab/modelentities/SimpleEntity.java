@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Note: this class does NOT inherit from PojoBase
  */
 //TODO - add annotation so that only non-null fields are in JSON body
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SimpleEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -44,6 +45,7 @@ public class SimpleEntity implements Serializable {
 	}
 
 	// TODO - make JSON field 'msgEchodBack', not 'message'
+	@JsonProperty("msgEchodBack")
 	public String getMessage() {
 		return message;
 	}
@@ -59,6 +61,7 @@ public class SimpleEntity implements Serializable {
 		this.somethingElse = somethingElse;
 	}
 
+	@JsonProperty
 	public LocalDateTime getDate() {
 		return date;
 	}
